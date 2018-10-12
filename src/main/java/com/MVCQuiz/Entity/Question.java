@@ -1,7 +1,9 @@
 package com.MVCQuiz.Entity;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class Question
 {
 
@@ -28,6 +30,15 @@ public class Question
     @Override
     public int hashCode() {
         return Objects.hash(getQuestionTitle(), getQuestionText(), getAnswer());
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "questionTitle='" + questionTitle + '\'' +
+                ", questionText='" + questionText + '\'' +
+                ", answer='" + answer + '\'' +
+                '}';
     }
 
     public String getQuestionTitle() {
